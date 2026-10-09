@@ -1,0 +1,64 @@
+/* Dots website: the same calm palette as the app, light and dark. */
+:root {
+  --bg: #F7F5F2;
+  --surface: #FFFFFF;
+  --line: #E9E5DF;
+  --ink: #24232A;
+  --ink-soft: #6F6C78;
+  --accent: #6E5FE0;
+  --coral: #F29E9E;
+  --peach: #F5BE85;
+  --sage: #8FCFC0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121215;
+    --surface: #1D1D22;
+    --line: #2C2C33;
+    --ink: #F1EFEA;
+    --ink-soft: #A3A0AC;
+    --accent: #A698FF;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 ui-rounded, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 16px 64px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+nav a { color: var(--ink-soft); text-decoration: none; }
+nav a:hover, nav a[aria-current] { color: var(--accent); }
+
+h1 { font-size: 40px; line-height: 1.15; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 32px 0 8px; }
+p, li { color: var(--ink-soft); }
+a { color: var(--accent); }
+
+.dots { display: flex; gap: 10px; align-items: center; margin-bottom: 24px; }
+.dots span { display: block; border-radius: 50%; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+footer { margin-top: 48px; font-size: 14px; color: var(--ink-soft); }
